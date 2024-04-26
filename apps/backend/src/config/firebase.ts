@@ -1,6 +1,6 @@
 import * as admin from 'firebase-admin';
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -14,7 +14,8 @@ export function setupFirebase() {
     appId: "1:64228865105:web:07af4f658df3f34e853470",
     measurementId: "G-2JB7YYG4DW"
   });
-  const analytics = getAnalytics(app);
+  
+//   const analytics = getAnalytics(app);
   
   admin.initializeApp({
     credential:
