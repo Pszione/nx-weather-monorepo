@@ -1,0 +1,35 @@
+{
+  "entryFile": "apps/backend/src/main.ts",
+  "controllerPathGlobs": ["apps/backend/src/**/*Controller.ts"],
+  "swagger": {
+    "outputDirectory": "./dist/apps/backend",
+    "entryFile": "./apps/backend/src/main.ts",
+    "host": "localhost:3000",
+    "basePath": ""
+  },
+  "routes": {
+    "entryFile": "./apps/backend/src/main.ts",
+    "routesDir": "./apps/backend/src"
+  },
+  "spec": {
+    "outputDirectory": "apps/backend/spec",
+    "specVersion": 3,
+    "securityDefinitions": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      },
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
+  },
+  "compilerOptions": {
+    "paths": {
+      "@libs/models": ["libs/src/models"],
+      "@libs/utils": ["libs/src/utils"]
+    }
+  }
+}

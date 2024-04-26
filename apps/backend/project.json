@@ -53,6 +53,18 @@
         }
       }
     },
+    "build-tsoa": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsoa spec-and-routes -c=apps/backend/backend.tsoa.json"
+      }
+    },
+    "watch-tsoa": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nodemon --config apps/backend/backend.nodemon.json -x tsoa spec-and-routes -c=apps/backend/backend.tsoa.json"
+      }
+    },
     "docker-build": {
       "dependsOn": ["build"],
       "command": "docker build -f apps/backend/Dockerfile . -t backend"

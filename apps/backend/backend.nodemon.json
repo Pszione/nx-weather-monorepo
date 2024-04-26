@@ -1,0 +1,5 @@
+{
+  "exec": "ts-node apps/backend/src/main.ts",
+  "watch": ["apps/backend/src", "libs/src"],
+  "ext": "ts"
+}
